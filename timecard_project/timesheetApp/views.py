@@ -1,5 +1,7 @@
-from django.http import HttpResponse
-
+from django.shortcuts import render
+from .models import Timesheet
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    timesheet_list = Timesheet.objects.all()
+    context = {'timesheet_list' : timesheet_list}
+    return render(request, 'timesheetApp/index.html', context)
