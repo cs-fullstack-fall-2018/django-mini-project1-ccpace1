@@ -2,8 +2,8 @@
 {% if timesheet_list %}
 <ul>
     {% for eachTimesheet in timesheet_list %}
-    <li> {{ eachTimesheet.name }} worked {{ eachTimesheet.hours}} at {{ eachTimesheet.school}}</li>
-    {% endfor %}}
+    <li> {{ eachTimesheet.name }} worked {{ eachTimesheet.hours}} hours at {{ eachTimesheet.school}}</li>
+    {% endfor %}
 </ul>
 {% else %}}
 <p>No Timesheets found</p>
